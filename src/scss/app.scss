@@ -1,0 +1,20 @@
+body, html, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+.app {
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url('../images/bg.jpg');
+}
+
+.active-menu {
+  color: #fff;
+}
+.nav_li {
+  cursor: pointer;
+}
