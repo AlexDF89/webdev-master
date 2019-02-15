@@ -1,15 +1,13 @@
 import { combineReducers } from 'redux';
 
 import { default as menu } from './menu';
-import content, * as fromContent from './content';
+import { default as home } from './home';
+import { default as about } from './about';
 
 const reducer = combineReducers({
   menu,
-  content
+  home,
+  about
 });
 
 export default reducer;
-
-export function getActiveContent(state) {
-  return fromContent.getActiveContent(state)
-}

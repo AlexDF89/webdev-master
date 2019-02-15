@@ -6,35 +6,29 @@ const getState = () => {
   return {
     menu: [
       {
-        id: 1,
+        id: '/',
         text: "Главная",
         active: true
       },
       {
-        id: 2,
+        id: '/about',
         text: "О себе",
         active: false
       },
       {
-        id: 3,
+        id: '/portfolio',
         text: "Портфолио",
         active: false
       }
     ],
-    content: [
-      {
-        id: 1,
-        h1: 'Главная страница'
-      },
-      {
-        id: 2,
-        h1: 'О себе'
-      },
-      {
-        id: 3,
-        h1: 'Мое портфолио'
-      }
-    ]
+    home: {
+      id: '/',
+      h1: 'Главная страница'
+    },
+    about: {
+      id: '/about',
+      h1: 'О себе'
+    }
   };
 }
 

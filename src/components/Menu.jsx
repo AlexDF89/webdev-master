@@ -9,6 +9,7 @@ function Menu(props) {
       <ul className="nav">
         {props.menu.map( menu => 
           <MenuLi
+            menuId={menu.id}
             active={menu.active}
             text={menu.text} 
             key={menu.id}
@@ -23,6 +24,7 @@ function Menu(props) {
 MenuLi.propTypes = {
   menu: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
+    menuId: PropTypes.string.isRequired,
     active: PropTypes.bool.isRequired
   }))
 };
