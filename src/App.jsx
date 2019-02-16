@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import MenuContainer from './containers/MenuContainer';
 import HomeContainer from './containers/HomeContainer';
 import AboutContainer from './containers/AboutContainer';
+import NotFound from './components/NotFound';
 import './scss/app.scss';
 
 class App extends Component {
@@ -12,8 +13,11 @@ class App extends Component {
       <Router>
         <div className="app">
           <MenuContainer />
-          <Route exact path="/" component={HomeContainer} />
-          <Route path="/about" component={AboutContainer} />
+          <Switch>
+            <Route exact path="/" component={HomeContainer} />
+            <Route path="/about" component={AboutContainer} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </Router>
     );

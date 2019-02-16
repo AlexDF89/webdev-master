@@ -1,9 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function MenuLi(props) {
   return (
-    <li className={'nav_li' + (props.active ? ' active-menu' : '')} onClick={props.onClick}>
-      <a href={props.menuId}>{props.text}</a>
+    <li className={'nav_li' + (props.active ? ' active-menu-li' : '')} onClick={props.onClick}>
+      <NavLink exact to={props.menuId} activeClassName="active-menu-a">{props.text}</NavLink>
     </li>
   );
 }
