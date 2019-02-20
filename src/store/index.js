@@ -19,15 +19,32 @@ const getState = () => {
         id: '/portfolio',
         text: "Портфолио",
         active: false
+      },
+      {
+        id: '/contacts',
+        text: "Контакты",
+        active: false
       }
     ],
     home: {
       id: '/',
-      h1: 'Главная страница'
+      h1: 'Главная страница',
+      specialization: 'Веб-разработчик',
+      developerName: 'Александр Дюков-Франци',
+      desc: 'Профессиональная разработка сайтов',
+      mail: 'AlexDF89@yandex.ru'
     },
     about: {
       id: '/about',
       h1: 'О себе'
+    },
+    portfolio: {
+      id: '/portfolio',
+      h1: 'Мое портфолио'
+    },
+    contacts: {
+      id: '/contacts',
+      h1: 'Мои контакты'
     }
   };
 }

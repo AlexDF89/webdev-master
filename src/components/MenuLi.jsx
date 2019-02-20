@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function MenuLi(props) {
   return (
     <li className={'nav_li' + (props.active ? ' active-menu-li' : '')} onClick={props.onClick}>
-      <NavLink exact to={props.menuId} activeClassName="active-menu-a">{props.text}</NavLink>
+      <NavLink className="nav-a" exact to={props.menuId} activeClassName="active-menu-a">{props.text}</NavLink>
     </li>
   );
 }

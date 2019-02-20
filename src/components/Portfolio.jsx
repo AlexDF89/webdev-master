@@ -1,13 +1,13 @@
 import React from 'react';
 
-function About(props) {
+function Portfolio(props) {
   return (
     <main>
       <section className="first-screen">
-        <h1>{ props.about.h1 }</h1>      
+        <h1>{ props.portfolio.h1 }</h1>
       </section>
     </main>
   );
 }
 
-export default About;
+export default Portfolio;

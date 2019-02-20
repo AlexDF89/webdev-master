@@ -5,8 +5,8 @@ import MenuLi from './MenuLi';
 
 function Menu(props) {
   return (
-    <nav>
-      <ul className="nav">
+    <nav className="wrapper-nav">
+      <ul className="nav-ul">
         {props.menu.map( menu => 
           <MenuLi
             menuId={menu.id}

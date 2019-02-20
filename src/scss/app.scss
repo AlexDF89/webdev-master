@@ -1,4 +1,4 @@
-body, html, ul, ol, li {
+body, html, ul, ol, li, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -6,15 +6,98 @@ li {
   list-style-type: none;
 }
 
+
+@keyframes bg {
+	0% {
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-o-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+	100% {
+		-moz-transform: translate3d(-3840px,0,0);
+		-webkit-transform: translate3d(-3840px,0,0);
+		-o-transform: translate3d(-3840px,0,0);
+		-ms-transform: translate3d(-3840px,0,0);
+		transform: translate3d(-3840px,0,0);
+	}
+}
 .app {
+  overflow-x: hidden;
+  position: relative;
+}
+.home-page h1 {
+  margin-top: 14%;
+}
+.first-screen-bg {
+  z-index: -1;
+  background-image: url('../images/bg.jpg');
+  animation: bg 180s linear infinite;
   min-width: 100%;
   min-height: 100vh;
-  background-image: url('../images/bg.jpg');
+  transform: translate3d(0,0,0);
+  background-position: top left;
+  background-repeat: repeat-x;  
+  height: 100%;  
+  left: 0;  
+  opacity: 1;  
+  position: absolute;  
+  top: 0;  
+  background-size: auto;  
+  width: 11520px;
 }
-
-.active-menu {
-  color: #fff;
+.first-screen {
+  min-width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.wrapper-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 4;
+}
+.nav-ul {
+	position: absolute;
+	top: 20%;
+	padding: 0;
+	z-index: 3;
 }
 .nav_li {
   cursor: pointer;
+  margin-top: 5px;
+  margin-left: -3px;
+  float: left;
+  clear: both;
+  text-align: right;
+}
+.nav-a {
+	font-size: 20px;
+	padding: 10px 30px;
+	color: rgba(66,42,42,1);
+	text-decoration: none;
+	text-transform: uppercase;
+	float: right;
+	margin-right: 10%;
+	display: inline-block;
+	border: 1px solid rgba(66,42,42,1);
+	border-radius: 5px;
+	transition: all .5s;
+	width: 100%;
+}
+.nav-a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(66,42,42,1);
+}
+.active-menu {
+  color: #fff;
+}
+.active-menu-a {
+  padding-left: 60px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(66,42,42,1);
 }

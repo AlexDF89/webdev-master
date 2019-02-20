@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MenuContainer from './containers/MenuContainer';
 import HomeContainer from './containers/HomeContainer';
 import AboutContainer from './containers/AboutContainer';
+import PortfolioContainer from './containers/PortfolioContainer';
+import ContactsContainer from './containers/ContactsContainer';
 import NotFound from './components/NotFound';
 import './scss/app.scss';
 
@@ -12,10 +14,13 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
+          <div className="first-screen-bg"></div>
           <MenuContainer />
           <Switch>
             <Route exact path="/" component={HomeContainer} />
             <Route path="/about" component={AboutContainer} />
+            <Route path="/portfolio" component={PortfolioContainer} />
+            <Route path="/contacts" component={ContactsContainer} />
             <Route component={NotFound} />
           </Switch>
         </div>
