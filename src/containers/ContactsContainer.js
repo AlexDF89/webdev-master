@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Contacts from '../components/Contacts';
+import Contacts from '../components/pages/Contacts';
 
 function mapStateToProps(state) {
   return {

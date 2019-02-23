@@ -6,7 +6,8 @@ import HomeContainer from './containers/HomeContainer';
 import AboutContainer from './containers/AboutContainer';
 import PortfolioContainer from './containers/PortfolioContainer';
 import ContactsContainer from './containers/ContactsContainer';
-import NotFound from './components/NotFound';
+import NotFound from './components/pages/NotFound';
+import Copyright from './components/Copyright';
 import './scss/app.scss';
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path="/contacts" component={ContactsContainer} />
             <Route component={NotFound} />
           </Switch>
+					<Copyright />
         </div>
       </Router>
     );
