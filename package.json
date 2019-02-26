@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.4",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.1",
     "react": "^16.8.1",
@@ -16,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"server": "node server"
   },
   "eslintConfig": {
     "extends": "react-app"

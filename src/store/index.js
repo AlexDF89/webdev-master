@@ -45,7 +45,21 @@ const getState = () => {
     contacts: {
       id: '/contacts',
       h1: 'Мои контакты'
-    }
+		},
+		social: [
+			{
+				imgSrc: '',
+				href: 'https://github.com/AlexDF89'
+			},
+			{
+				imgSrc: '',
+				href: 'https://www.fl.ru/users/alexdf89/'
+			},
+			{
+				imgSrc: '',
+				href: 'https://vk.com/id12591211'
+			}
+		]
   };
 }
 
