@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Button';
-import SocialContaier from '../../containers/SocialContainer';
+import Social from '../Social';
 
 function Home(props) {
   return (
@@ -16,7 +16,7 @@ function Home(props) {
 					<a className="home-page_mail" href={`mailto:${props.home.mail}`}>{ props.home.mail }</a>
 				</div>
 				<Button text="Связаться со мной" />
-				<SocialContaier />
+        <Social />
       </section>
     </main>
   );
