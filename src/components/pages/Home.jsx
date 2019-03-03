@@ -8,12 +8,12 @@ function Home(props) {
       <section className="first-screen home-page">
 
         <h1>
-          <div className="h1-spec">{ props.home.specialization }</div>
-          <div className="h1-name">{ props.home.developerName }</div>
+          <div className="h1-spec">Веб-разработчик</div>
+          <div className="h1-name">Александр Дюков-Франци</div>
         </h1>
-        <div className="home-page_desc">{ props.home.desc }</div>
+        <div className="home-page_desc">Профессиональная раработка сайтов</div>
         <div>
-					<a className="home-page_mail" href={`mailto:${props.home.mail}`}>{ props.home.mail }</a>
+					<a className="home-page_mail" href="mailto:AlexDF89@yandex.ru">AlexDF89@yandex.ru</a>
 				</div>
 				<Button text="Связаться со мной" />
         <Social />

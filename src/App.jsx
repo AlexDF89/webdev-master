@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import MenuContainer from './containers/MenuContainer';
-import HomeContainer from './containers/HomeContainer';
-import AboutContainer from './containers/AboutContainer';
+import Home from './components/pages/Home';
 import PortfolioContainer from './containers/PortfolioContainer';
-import ContactsContainer from './containers/ContactsContainer';
+import Contacts from './components/pages/Contacts';
 import NotFound from './components/pages/NotFound';
 import Copyright from './components/Copyright';
 import './scss/app.scss';
 
+
 class App extends Component {
+	componentWillMount() {
+
+	}
   render() {
     return (
       <Router>
@@ -18,10 +21,9 @@ class App extends Component {
           <div className="first-screen-bg"></div>
           <MenuContainer />
           <Switch>
-            <Route exact path="/" component={HomeContainer} />
-            <Route path="/about" component={AboutContainer} />
+            <Route exact path="/" component={Home} />
             <Route path="/portfolio" component={PortfolioContainer} />
-            <Route path="/contacts" component={ContactsContainer} />
+            <Route path="/contacts" component={Contacts} />
             <Route component={NotFound} />
           </Switch>
 					<Copyright />

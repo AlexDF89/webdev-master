@@ -4,7 +4,7 @@ function Contacts(props) {
   return (
     <main>
       <section className="first-screen">
-        <h1>{ props.contacts.h1 }</h1>
+        <h1>Мои контакты</h1>
       </section>
     </main>
   );
