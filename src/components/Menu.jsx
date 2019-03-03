@@ -10,10 +10,11 @@ function Menu(props) {
         {props.menu.map( menu => 
           <MenuLi
             menuId={menu.id}
+            key={menu.id}
             active={menu.active}
             text={menu.text} 
-            key={menu.id}
-            onClick={() => props.onSetMenu(menu.id)}
+						classes='nav_li'
+						onClick={() => props.onSetMenu(menu.id)}
           />)
         }
       </ul>

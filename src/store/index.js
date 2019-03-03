@@ -20,7 +20,25 @@ const getState = () => {
         text: "Контакты",
         active: false
       }
-    ]
+		],
+		portfolio: [
+			{
+				id: '/FL',
+				text: 'FL',
+				active: false
+			},
+			{
+				id: '/Github',
+				text: 'Github',
+				active: false
+			},
+			{
+				id: '/Games',
+				text: 'Games',
+				active: false
+			}
+
+		]
   };
 }
 
