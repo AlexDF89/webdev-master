@@ -23,22 +23,31 @@ const getState = () => {
 		],
 		portfolio: [
 			{
-				id: '/FL',
-				text: 'FL',
-				active: false
+				type: 'FL',
+				title: 'Портфолио FL 1'
 			},
 			{
-				id: '/Github',
-				text: 'Github',
-				active: false
+				type: 'FL',
+				title: 'Портфолио FL 2'
 			},
 			{
-				id: '/Games',
-				text: 'Games',
-				active: false
+				type: 'Github',
+				title: 'Портфолио Github 1'
+			},
+			{
+				type: 'Games',
+				title: 'Портфолио Games 1'
+			},
+			{
+				type: 'Github',
+				title: 'Портфолио Github 2'
+			},
+			{
+				type: 'Games',
+				title: 'Портфолио Games 2'
 			}
-
-		]
+    ],
+    portfolioFilter: 'ALL'
   };
 }
 
