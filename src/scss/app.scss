@@ -30,10 +30,12 @@ body {
 	font-family: 'roboto-example';
 	color: $primary-color;
 	line-height: 1.75;
+	background-color: #d4d3cf;
 }
 .app {
   overflow-x: hidden;
-  position: relative;
+	position: relative;
+	box-sizing: border-box;
 }
 .wrapper-nav {
   position: absolute;
@@ -164,6 +166,12 @@ h1 {
   min-width: 100%;
   height: 100vh;
   text-align: center;
+	padding-bottom: 150px;
+}
+.second-screen {
+	margin-top: -100vh;
+	padding-bottom: 150px;
+	min-height: 100vh;
 }
 .home-page_mail {
 	color: rgba(66,42,42,1);
@@ -209,10 +217,63 @@ h1 {
 	border-radius: 5px 5px 0 0;
 	float: left;
 }
+.portfolio-li-active {
+	background-color: rgba(220, 220, 220, .9);
+}
 .portfolio-list {
 	background-color: rgba(220, 220, 220, .9);
 	clear: both;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
-.portfolio-li-active {
-	background-color: rgba(220, 220, 220, .9);
+.portfolio-item {
+	border: 1px solid silver;
+	flex-basis: 30%;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	cursor: pointer;
+	transition: all .1s;
+	overflow: hidden;
+}
+.portfolio-item-a {
+	color: $primary-color;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 10px;
+}
+.portfolio-item:hover {
+	transform: scale(1.02);
+	box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+.portfolio-item-img-wrap {
+	max-width: 100%;
+	height: 190px;
+	overflow: hidden;
+}
+.portfolio-item-img {
+	max-width: 100%;
+}
+.portfolio-item-title {
+	text-align: center;
+}
+.portfolio-item-desc {
+	line-height: 20px;
+	font-size: 14px;
+	height: 60px;
+	overflow: hidden;
+	position: relative;
+}
+.portfolio-item-button {
+	font-size: .8em;
+	letter-spacing: 1px;
+	padding: 5px 20px;
+	border: 1px solid $primary-color;
+	float: right;
+	margin-bottom: 10px;
 }

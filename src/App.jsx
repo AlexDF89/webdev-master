@@ -16,19 +16,19 @@ class App extends Component {
 	}
   render() {
     return (
-      <Router>
-        <div className="app">
-          <div className="first-screen-bg"></div>
-          <MenuContainer />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/portfolio" component={PortfolioContainer} />
-            <Route path="/contacts" component={Contacts} />
-            <Route component={NotFound} />
-          </Switch>
-					<Copyright />
-        </div>
-      </Router>
+        <Router>
+          <div className="app">
+            <div className="first-screen-bg"></div>
+            <MenuContainer />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/portfolio" component={PortfolioContainer} />
+              <Route path="/contacts" component={Contacts} />
+              <Route component={NotFound} />
+            </Switch>
+          <Copyright />
+          </div>
+        </Router>
     );
   }
 }

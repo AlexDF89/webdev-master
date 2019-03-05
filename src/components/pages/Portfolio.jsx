@@ -7,17 +7,19 @@ function Portfolio(props) {
   return (
     <main>
       <section className="first-screen">
+      </section>
+      <section className="second-screen">
         <div className="portfolio-wrapper">
-          <h1>Мое портфолио</h1>
+            <h1>Мое портфолио</h1>
 
-          <PortfolioFilterContainer />
+            <PortfolioFilterContainer />
 
-          <ul className="portfolio-list">
-            {props.portfolio.map(item => 
-              <PortfolioItem title={item.title} />
-            )}
-          </ul>
-        </div>
+            <ul className="portfolio-list">
+              {props.portfolio.map(item => 
+                <PortfolioItem item={item} />
+              )}
+            </ul>
+          </div>
       </section>
     </main>
   );
