@@ -248,8 +248,9 @@ h1 {
 	padding: 10px;
 }
 .portfolio-item:hover {
-	transform: scale(1.02);
-	box-shadow: 0 0 15px rgba(0,0,0,.2);
+	margin-left: 1px;
+	margin-top: -1px;
+	box-shadow: 0 0 15px rgba(0,0,0,.3);
 }
 .portfolio-item-img-wrap {
 	max-width: 100%;

@@ -11,9 +11,6 @@ import './scss/app.scss';
 
 
 class App extends Component {
-	componentWillMount() {
-
-	}
   render() {
     return (
         <Router>

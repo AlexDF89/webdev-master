@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 
 import reducer from '../reducers';
 
-const getState = () => {
+const initialState = () => {
   return {
     menu: [
       {
@@ -75,6 +75,6 @@ const getState = () => {
   };
 }
 
-const store = createStore(reducer, getState());
+const store = createStore(reducer, initialState());
 
 export default store;
