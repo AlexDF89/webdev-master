@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { setMenu } from '../actions';
+import { setActiveMenu } from '../actions';
 import Menu from '../components/Menu';
 
 function mapStateToProps(state) {
@@ -11,7 +11,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onSetMenu: id => dispatch(setMenu(id))
+    onSetMenu: id => dispatch(setActiveMenu(id))
   };
 }
 

@@ -1,8 +1,11 @@
-import { SET_MENU } from '../actions';
+import { SET_ACTIVE_MENU, GET_MENU } from '../actions';
 
 export default function reducer( state = [], action ) {
   switch (action.type) {
-    case SET_MENU:
+    case GET_MENU:
+      return action.menu 
+      
+    case SET_ACTIVE_MENU:
       return state.map(elem => {
         elem.active = false;
         if (elem.id === action.id) elem.active = true;

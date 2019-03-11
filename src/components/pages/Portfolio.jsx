@@ -15,8 +15,8 @@ function Portfolio(props) {
             <PortfolioFilterContainer />
 
             <ul className="portfolio-list">
-              {props.portfolio.map(item => 
-                <PortfolioItem item={item} />
+              {props.portfolio.map((item, i) => 
+                <PortfolioItem item={item} key={i} />
               )}
             </ul>
           </div>

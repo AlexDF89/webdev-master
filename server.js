@@ -43,6 +43,61 @@ function getPortfolioFL(err, cb) {
     })
     .catch(err => console.error(err.message));
 }
-getPortfolioFL(null, result => console.log(result));
+
+app.get('/api/getMenu', (req, res) => {
+  res.set('Content-Type', 'application/json; charset: utf-8');
+  res.end(JSON.stringify([
+    {
+      id: '/',
+      text: "Главная",
+      active: true
+    },
+    {
+      id: '/portfolio',
+      text: "Портфолио",
+      active: false
+    },
+    {
+      id: '/contacts',
+      text: "Контакты",
+      active: false
+    }
+  ]));
+});
+
+app.get('/api/getPortfolioFL', (req, res) => {
+  res.set('Content-Type', 'application/json; charset: utf-8');
+  getPortfolioFL(null, result => res.end(JSON.stringify(result)));
+});
+
+app.get('/api/getPortfolioGit', (req, res) => {
+  res.set('Content-Type', 'application/json; charset: utf-8');
+  res.end(JSON.stringify([
+    {
+      type: ['Github'],
+      title: 'Портфолио Github 1',
+      src: '',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi at rem omnis odio ad vero amet delectus. Sequi culpa deserunt commodi eius corporis vero placeat consequatur facere tempore, necessitatibus minus cupiditate expedita vel, suscipit dolorum officiis temporibus quaerat non?'
+    },
+    {
+      type: ['Games', 'Github'],
+      title: 'Портфолио Games 1',
+      src: '',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta harum ipsa temporibus dolorem odit quis velit vero at, distinctio aut. Deserunt hic animi saepe sunt at reiciendis id voluptate officiis in tempora nobis vel qui nihil, excepturi facilis obcaecati praesentium unde est sint temporibus fuga atque recusandae? Vero, non ratione!'
+    },
+    {
+      type: ['Github'],
+      title: 'Портфолио Github 2',
+      src: '',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat, eos qui maiores esse repudiandae ut dicta! Recusandae nobis maiores aut quia possimus, obcaecati iure quae labore accusamus blanditiis! Explicabo ad possimus excepturi in error, iste aliquam ab eligendi quod hic? Harum numquam consequuntur officia dolor quia ipsam culpa nemo aspernatur. Dolore incidunt ipsum sit nesciunt ratione? Iure neque atque earum vel adipisci eligendi ipsum? Neque qui quibusdam vel adipisci!'
+    },
+    {
+      type: ['Games', 'Github'],
+      title: 'Портфолио Games 2',
+      src: '',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat, eos qui maiores esse repudiandae ut dicta! Recusandae nobis maiores aut quia possimus, obcaecati iure quae labore accusamus blanditiis! Explicabo ad possimus excepturi in error, iste aliquam ab eligendi quod hic? Harum numquam consequuntur officia dolor quia ipsam culpa nemo aspernatur.'
+    }
+  ]));
+});
 
 app.listen(3001, console.log('Сервер работает на порту 3001'));
