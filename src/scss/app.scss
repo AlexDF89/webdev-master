@@ -32,6 +32,11 @@ body {
 	line-height: 1.75;
 	background-color: #d4d3cf;
 }
+h1 {
+	font-size: 2.7em;
+	text-transform: uppercase;
+	text-align: center;
+}
 h2 {
 	font-size: 1.1em;
 	line-height: 1.2;
@@ -121,10 +126,6 @@ h2 {
 	background-color: $primary-color;
 	color: #fff;
 }
-h1 {
-	font-size: 2.7em;
-	text-transform: uppercase;
-}
 .h1-spec {
 	font-size: .75em;
 	letter-spacing: 2px;
@@ -194,14 +195,14 @@ h1 {
 	margin-top: 20px;
 }
 .social-li {
-	width: 40px;
-	height: 40px;
 	display: inline-block;
 	margin-left: 10px;
 	margin-right: 10px;
 }
 .social-img {
 	width: 100%;
+	width: 40px;
+	height: 40px;
 	filter:	drop-shadow(0 0 15px rgba(0, 0, 0, .5));
 	transition: all .2s;
 }
@@ -209,9 +210,10 @@ h1 {
 	filter:	drop-shadow(0 0 15px rgba(0, 0, 0, 1));
 	transform: scale(1.15);
 }
-.portfolio-wrapper {
+.second-screen_in {
 	max-width: 1200px;
 	margin: 0 auto;
+	padding-top: 30px;
 }
 .portfolio-nav {
 	margin-left: 20px;
@@ -224,9 +226,11 @@ h1 {
 	cursor: pointer;
 	border-radius: 5px 5px 0 0;
 	float: left;
+	box-shadow: inset 0 -3px 7px rgba(50,50,50,.1);
 }
 .portfolio-li-active {
 	background-color: rgba(220, 220, 220, .9);
+	box-shadow: none;
 }
 .portfolio-list {
 	background-color: rgba(220, 220, 220, .9);
@@ -284,4 +288,72 @@ h1 {
 	border: 1px solid $primary-color;
 	float: right;
 	margin-bottom: 10px;
+}
+
+.contacts-desc {
+	text-align: center;
+	font-size: 1.4em;
+}
+.contacts-wrap {
+	display: flex;
+}
+.contacts-item {
+	flex-basis: 50%;
+}
+.contacts-social {
+	display: flex;
+	flex-direction: column;
+}
+.contacts-social .social-img:hover {
+	filter:	drop-shadow(0 0 15px rgba(0, 0, 0, 1));
+	transform: scale(1);
+}
+.contacts-social-item {
+	margin-top: 30px;
+}
+.contacts-item:first-child {
+	flex: 1;
+}
+.contacts-item:last-child {
+	flex: 1.5;
+}
+.contacts-social-item a {
+	text-decoration: none;
+	color: $primary-color;
+	font-size: 28px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+.contacts-social-item img {
+	position: relative;
+	top: 10px;
+	margin-right: 10px;
+}
+.textarea {
+	display: block;
+
+}
+.contacts-form {
+	display: flex;
+	flex-direction: column;
+}
+.input {
+	color: $primary-color;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 20px;
+	background-color: rgba(255,255,255,.8);
+	font-size: 1.2em;
+}
+.textarea  {
+	color: $primary-color;
+	resize: none;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px;
+	background-color: rgba(255,255,255,.8);
+	min-height: 200px;
+	font-size: 1.2em;
 }

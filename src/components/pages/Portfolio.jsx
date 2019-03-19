@@ -9,7 +9,7 @@ function Portfolio(props) {
       <section className="first-screen">
       </section>
       <section className="second-screen">
-        <div className="portfolio-wrapper">
+        <div className="second-screen_in">
             <h1>Мое портфолио</h1>
 
             <PortfolioFilterContainer />
