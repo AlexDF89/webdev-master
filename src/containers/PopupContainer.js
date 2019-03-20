@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import Popup from '../components/Popup';
+import { closePopup } from '../actions';
 
 function mapStateToProps(state) {
   return {
@@ -8,6 +9,12 @@ function mapStateToProps(state) {
   };
 }
 
-const PopupContainer = connect(mapStateToProps)(Popup);
+function mapDispatchToProps(dispatch) {
+  return {
+    onClosePopup: popup => dispatch(closePopup(popup))
+  };
+}
+
+const PopupContainer = connect(mapStateToProps, mapDispatchToProps)(Popup);
 
 export default PopupContainer;

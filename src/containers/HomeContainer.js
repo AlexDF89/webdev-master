@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
-import { setPopup } from '../actions';
+import { openPopup } from '../actions';
 import Home from '../components/pages/Home';
 
 function mapDispatchToProps(dispatch) {
   return {
-    onSetPopup: popup => dispatch(setPopup(popup))
+    onSetPopup: popup => dispatch(openPopup(popup))
   };
 }
 

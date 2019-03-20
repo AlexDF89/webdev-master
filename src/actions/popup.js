@@ -1,8 +1,16 @@
-export const SET_POPUP  = 'SET_POPUP';
+export const OPEN_POPUP  = 'OPEN_POPUP';
+export const CLOSE_POPUP  = 'CLOSE_POPUP';
 
-export function setPopup(popup) {
+export function openPopup(popup) {
   return {
-    type: SET_POPUP,
+    type: OPEN_POPUP,
+    popup
+  };
+}
+
+export function closePopup(popup) {
+  return {
+    type: CLOSE_POPUP,
     popup
   };
 }

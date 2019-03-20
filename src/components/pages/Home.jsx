@@ -19,7 +19,7 @@ function Home(props) {
 				<Button onClick={() => props.onSetPopup(true)} text="Связаться со мной" />
         <Social />
 
-        <PopupContainer />
+        <PopupContainer classes="home-popup" />
       </section>
     </main>
   );

@@ -6,6 +6,12 @@ import MenuLi from './MenuLi';
 function Menu(props) {
   return (
     <nav className="wrapper-nav">
+      <input id="hamburger-checkbox" className="hamburger-checkbox" type="checkbox" />
+      <div className="hamburger">
+        <label className="hamburger-label" htmlFor="hamburger-checkbox">
+          <p className="hamburger-btn"></p>
+        </label>
+      </div>
       <ul className="nav-ul">
         {props.menu.map( menu => 
           <MenuLi
