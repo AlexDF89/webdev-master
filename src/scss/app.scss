@@ -463,6 +463,13 @@ h2 {
 	.portfolio-item {
 		flex-basis: 46%;
 	}
+	.contacts-social-item a {
+		font-size: 20px;
+	}
+	.contacts-social-item img {
+		width: 34px;
+		height: 34px;
+	}
 }
 
 @media only screen and (max-width : 1200px) {
@@ -474,6 +481,9 @@ h2 {
 @media only screen and (max-width : 1025px) {
 	.second-screen_in {
 		max-width: 580px;
+	}
+	.contacts-item:last-child {
+		flex: 1;
 	}
 }
 
@@ -571,6 +581,15 @@ h2 {
 @media only screen and (max-width : 570px) {
 	.portfolio-item-title {
 		font-size: 1em;
+	}
+	.contacts-wrap {
+		flex-direction: column;
+	}
+	.contacts-social-item {
+		margin-top: 15px;
+	}
+	.contacts-item:last-child {
+		margin-top: 20px;
 	}
 }
 @media only screen and (max-width : 490px) {
