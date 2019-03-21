@@ -10,7 +10,7 @@ function Home(props) {
 
         <h1>
           <div className="h1-spec">Веб-разработчик</div>
-          <div className="h1-name">Александр Дюков-Франци</div>
+          <div className="h1-name">Александр <nobr>Дюков-Франци</nobr> </div>
         </h1>
         <div className="home-page_desc">Профессиональная разработка сайтов</div>
         <div>

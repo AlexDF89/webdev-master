@@ -48,7 +48,6 @@ h2 {
 .app {
   overflow-x: hidden;
 	position: relative;
-	box-sizing: border-box;
 }
 .wrapper-nav {
   position: absolute;
@@ -107,7 +106,6 @@ h2 {
 	width: 25px;
 	height: 20px;
 	left: 5px;
-	box-sizing: border-box;
 }
 .hamburger-checkbox {
 	display: none;
@@ -123,6 +121,7 @@ h2 {
 	position: relative;
 	z-index: 4;
 	cursor: pointer;
+	margin-left: 100px;
 }
 .hamburger:before {
 	content: '';
@@ -137,6 +136,7 @@ h2 {
 	transform-origin: 19px;
 	transform: rotate(-45deg) translate(2px, 2px);
 	border-bottom: none;
+	margin-left: 100px;
 }
 .hamburger:after {
 	content: '';
@@ -148,6 +148,7 @@ h2 {
 	bottom: 10px;
 	transition: all .5s;
 	transform: rotate(45deg);
+	margin-left: 100px;
 }
 .copyright {
 	font-size: 1.15em;
@@ -223,7 +224,7 @@ h2 {
 }
 .first-screen {
   min-width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 	padding-bottom: 150px;
 }
@@ -443,9 +444,36 @@ h2 {
 	font-size: 1.2em;
 }
 
+@media only screen and (max-width : 1585px) {
+	.second-screen_in {
+		max-width: 992px;
+	}
+}
+
+@media only screen and (max-width : 1375px) {
+	.second-screen_in {
+		max-width: 870px;
+	}
+}
+
+@media only screen and (max-width : 1255px) {
+	.second-screen_in {
+		max-width: 640px;
+	}
+	.portfolio-item {
+		flex-basis: 46%;
+	}
+}
+
 @media only screen and (max-width : 1200px) {
 	h1 {
 		font-size: 2.5em;
+	}
+}
+
+@media only screen and (max-width : 1025px) {
+	.second-screen_in {
+		max-width: 580px;
 	}
 }
 
@@ -477,6 +505,17 @@ h2 {
 }
 
 @media only screen and (max-width : 870px) {
+	h1 {
+		font-size: 1.8em;
+	}
+	.h1-name {
+		padding: 0 10px;
+	}
+	.second-screen_in {
+		max-width: 860px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	.hamburger {
 		display: block;
 	}
@@ -508,15 +547,42 @@ h2 {
 	}
 	.hamburger-checkbox:checked ~ .nav-ul {
 		margin-left: -180px;
-		box-sizing: border-box;
 	}
 	.hamburger-checkbox:checked ~ .hamburger:before {
 		transform: rotate(0) translate(0, 0);
 		border-top: 2px solid $primary-color;
 		border-bottom: 2px solid $primary-color;
+		margin-left: 0;
 	}
 	.hamburger-checkbox:checked ~ .hamburger:after {
 		transform: rotate(0);
 		border-top: 2px solid $primary-color;
+		margin-left: 0;
+	}
+	.hamburger-checkbox:checked ~ .hamburger .hamburger-btn {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width : 690px) {
+	.portfolio-item-button {
+		font-size: .75em;
+	}
+}
+@media only screen and (max-width : 570px) {
+	.portfolio-item-title {
+		font-size: 1em;
+	}
+}
+@media only screen and (max-width : 490px) {
+	h1 {
+		font-size: 1.7em;
+	}
+	.portfolio-item {
+		flex-basis: 90%;
+	}
+}
+@media only screen and (max-width : 370px) {
+	.portfolio-nav_li {
+		padding: 5px 10px;
 	}
 }
