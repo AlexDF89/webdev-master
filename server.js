@@ -2,12 +2,13 @@
 const express = require('express');
 const app = express();
 
-const { 
+const {
   startPage,
   publicFiles,
   getMenu,
   getPortfolioFL,
-  getPortfolioGit } = require('./routes')
+  getPortfolioGit,
+  getPortfolioGames } = require('./routes')
 
 app.get('/', (req, res) => {
 
@@ -34,6 +35,12 @@ app.get('/api/getPortfolioFL', (req, res) => {
 app.get('/api/getPortfolioGit', (req, res) => {
 
   getPortfolioGit(req, res);
+
+});
+
+app.get('/api/getPortfolioGames', (req, res) => {
+
+  getPortfolioGames(req, res);
 
 });
 
