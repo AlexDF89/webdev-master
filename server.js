@@ -44,4 +44,11 @@ app.get('/api/getPortfolioGames', (req, res) => {
 
 });
 
-app.listen(3001, console.log('Сервер работает на порту 3001'));
+app.get('/api/HelloFromFar', (req, res) => {
+
+  res.writeHead(200, {'Content-Type': 'application/json'});
+  res.end(JSON.stringify({"body":"Привет от сайта webdev-master.ru"}));
+
+});
+
+app.listen(3000, console.log('Сервер работает на порту 3000'));
