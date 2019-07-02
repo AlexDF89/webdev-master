@@ -15,6 +15,16 @@ app.get('/', (req, res) => {
   startPage(req, res);
 
 });
+app.get('/portfolio', (req, res) => {
+
+  startPage(req, res);
+
+});
+app.get('/contacts', (req, res) => {
+
+  startPage(req, res);
+
+});
 
 app.get(/\.(css|js|jpeg|jpg|png|svg)/, (req, res) => {
 	publicFiles(req, res);
@@ -41,13 +51,6 @@ app.get('/api/getPortfolioGit', (req, res) => {
 app.get('/api/getPortfolioGames', (req, res) => {
 
   getPortfolioGames(req, res);
-
-});
-
-app.get('/api/HelloFromFar', (req, res) => {
-
-  res.writeHead(200, {'Content-Type': 'application/json'});
-  res.end(JSON.stringify({"body":"Привет от сайта webdev-master.ru"}));
 
 });
 
