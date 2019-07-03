@@ -10,17 +10,7 @@ const {
   getPortfolioGit,
   getPortfolioGames } = require('./routes')
 
-app.get('/', (req, res) => {
-
-  startPage(req, res);
-
-});
-app.get('/portfolio', (req, res) => {
-
-  startPage(req, res);
-
-});
-app.get('/contacts', (req, res) => {
+app.get(/^(\/(portfolio|contacts)?)$/i, (req, res) => {
 
   startPage(req, res);
 
