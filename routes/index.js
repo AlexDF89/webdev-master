@@ -4,6 +4,7 @@ const getMenu = require('./getMenu');
 const getPortfolioFL = require('./getPortfolioFL');
 const getPortfolioGit = require('./getPortfolioGit');
 const getPortfolioGames = require('./getPortfolioGames');
+const sendEmail = require('./sendEmail');
 
 module.exports = {
   startPage,
@@ -11,5 +12,6 @@ module.exports = {
   getMenu,
   getPortfolioFL,
   getPortfolioGit,
-  getPortfolioGames
+  getPortfolioGames,
+  sendEmail
 };

@@ -5,7 +5,7 @@ import logoMail from '../../images/mail_icon.png';
 import logoGit from '../../images/github_icon.svg';
 import logoFL from '../../images/fl_icon.png';
 import logoVK from '../../images/vk_icon.svg';
-import Form from '../Form';
+import FormContainer from '../../containers/FormContainer';
 
 
 
@@ -30,9 +30,17 @@ function Contacts(props) {
             </div>
 
             <div className="contacts-item">
-              <Form />
+              <FormContainer />
             </div>
           </div>
+        </div>
+        <div className="message">
+          {props.form.mes 
+            ? 
+              <div className="message-text">{props.form.mes}</div>            
+            : 
+              ''
+          }
         </div>
       </section>
     </main>

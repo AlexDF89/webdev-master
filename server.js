@@ -1,11 +1,15 @@
 
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json())
 
 const {
   startPage,
   publicFiles,
   getMenu,
+  sendEmail,
   getPortfolioFL,
   getPortfolioGit,
   getPortfolioGames } = require('./routes')
@@ -41,6 +45,12 @@ app.get('/api/getPortfolioGit', (req, res) => {
 app.get('/api/getPortfolioGames', (req, res) => {
 
   getPortfolioGames(req, res);
+
+});
+
+app.post('/api/sendForm', (req, res) => {
+
+  sendEmail(req, res);
 
 });
 

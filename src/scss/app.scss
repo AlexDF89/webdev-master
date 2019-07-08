@@ -34,7 +34,6 @@ body {
 }
 h1 {
 	font-size: 2.7em;
-	text-transform: uppercase;
 	text-align: center;
 }
 h2 {
@@ -160,14 +159,14 @@ h2 {
 	bottom: 55px;
 }
 .button {
+	color: #eee;
 	font-size: 1.15em;
-	color: $primary-color;
 	text-transform: uppercase;
 	line-height: 1.75;
 	letter-spacing: 2px;
 	padding: 10px 40px;
 	margin-top: 10px;
-	background-color: transparent;
+	background-color: rgba(66, 42, 42, .85);
 	border: 2px solid $primary-color;
 	border-radius: 5px;
 	cursor: pointer;
@@ -178,12 +177,12 @@ h2 {
 	color: #fff;
 }
 .h1-spec {
-	font-size: .75em;
+	font-size: 2.2em;
 	letter-spacing: 2px;
-	margin-bottom: 12px;
 }
 .h1-name {
 	letter-spacing: 3px;
+	font-size: 2.2em;
 }
 
 @keyframes bg {
@@ -203,7 +202,7 @@ h2 {
 	}
 }
 .home-page {
-  padding-top: 12%;
+  padding-top: 9%;
 }
 .first-screen-bg {
   z-index: -1;
@@ -236,9 +235,14 @@ h2 {
 .home-page_mail {
 	color: rgba(66,42,42,1);
 	font-size: 1.4em;
+	display: block;
+	margin-bottom: 25px;
+	margin-top: 10px;
 }
 .home-page_desc {
-	font-size: 1.4em;
+	text-transform: uppercase;
+	font-size: .9em;
+	letter-spacing: 3px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -252,8 +256,8 @@ h2 {
 }
 .social-img {
 	width: 100%;
-	width: 40px;
-	height: 40px;
+	width: 48px;
+	height: 48px;
 	filter:	drop-shadow(0 0 15px rgba(0, 0, 0, .5));
 	transition: all .2s;
 }
@@ -301,8 +305,9 @@ h2 {
 	margin-left: 20px;
 }
 .portfolio-nav_li {
+	color: #fff;
 	display: inline-block;
-	background-color: rgba(200, 200, 200, .9);
+	background-color: rgba(90, 60, 60, .9);
 	padding: 5px 20px;
 	margin-right: 5px;
 	cursor: pointer;
@@ -311,11 +316,11 @@ h2 {
 	box-shadow: inset 0 -3px 7px rgba(50,50,50,.1);
 }
 .portfolio-li-active {
-	background-color: rgba(220, 220, 220, .9);
+	background-color: rgba(60, 30, 30, 0.9);
 	box-shadow: none;
 }
 .portfolio-list {
-	background-color: rgba(220, 220, 220, .9);
+	background-color: rgba(60, 30, 30, .9);
 	clear: both;
 	border-radius: 5px;
 	padding: 20px;
@@ -336,7 +341,7 @@ h2 {
 	position: relative;
 }
 .portfolio-item-a {
-	color: $primary-color;
+	color: #fff;
 	text-decoration: none;
 	width: 100%;
 	height: 100%;
@@ -443,6 +448,20 @@ h2 {
 	min-height: 200px;
 	font-size: 1.2em;
 }
+.message {
+	position: fixed;
+	right: 0;
+	top: 50px;
+	z-index: 6;
+}
+.message-text {
+	background-color: rgba(60, 40, 40, .8);
+	padding: 20px 40px;
+	color: #fff;
+	border-radius: 5px 0 0 5px;
+	z-index: 6;
+	overflow: hidden;
+}
 
 @media only screen and (max-width : 1585px) {
 	.second-screen_in {
@@ -490,9 +509,6 @@ h2 {
 @media only screen and (max-width : 992px) {
 	h1 {
 		font-size: 2.2em;
-	}
-	.h1-spec {
-		margin-bottom: 5px;
 	}
 	.nav-a {
 		padding: 5px 25px;

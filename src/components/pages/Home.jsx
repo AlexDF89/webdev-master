@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Button from '../Button';
 import Social from '../Social';
 import PopupContainer from '../../containers/PopupContainer';
@@ -7,12 +8,16 @@ function Home(props) {
   return (
     <main>
       <section className="first-screen home-page">
+          
+        <div className="message">
+          {props.form.mes ?  <div className="message-text">{props.form.mes}</div>  : '' }
+        </div>
 
         <h1>
-          <div className="h1-spec">Веб-разработчик</div>
-          <div className="h1-name">Александр <nobr>Дюков-Франци</nobr> </div>
+        	<div className="home-page_desc">Профессиональная разработка сайтов</div>
         </h1>
-        <div className="home-page_desc">Профессиональная разработка сайтов</div>
+        <div className="h1-spec">Веб-разработчик</div>
+        <div className="h1-name">Александр <nobr>Дюков-Франци</nobr> </div>
         <div>
 					<a className="home-page_mail" href="mailto:AlexDF89@yandex.ru">AlexDF89@yandex.ru</a>
 				</div>

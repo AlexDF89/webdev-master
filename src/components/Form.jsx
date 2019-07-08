@@ -8,7 +8,7 @@ import Button from './Button';
 
 function Form(props) {
   return (
-    <form action="" className="contacts-form">
+    <form onSubmit={event => props.onSendForm(event)} className="contacts-form">
       <Textarea placeholder="Какой у вас вопрос?" />
       <Input placeholder="Введите email" />
       <Input placeholder="Введите номер телефона" />

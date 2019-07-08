@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MenuContainer from './containers/MenuContainer';
 import HomeContainer from './containers/HomeContainer';
 import PortfolioContainer from './containers/PortfolioContainer';
-import Contacts from './components/pages/Contacts';
+import ContactsContainer from './containers/ContactsContainer';
 import NotFound from './components/pages/NotFound';
 import Copyright from './components/Copyright';
 import './scss/app.scss';
@@ -20,7 +20,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={HomeContainer} />
               <Route path="/portfolio" component={PortfolioContainer} />
-              <Route path="/contacts" component={Contacts} />
+              <Route path="/contacts" component={ContactsContainer} />
               <Route component={NotFound} />
             </Switch>
           <Copyright />
