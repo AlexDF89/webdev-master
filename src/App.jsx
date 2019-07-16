@@ -9,6 +9,8 @@ import NotFound from './components/pages/NotFound';
 import Copyright from './components/Copyright';
 import './scss/app.scss';
 
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 
 class App extends Component {
   render() {
@@ -17,12 +19,18 @@ class App extends Component {
           <div className="app">
             <div className="first-screen-bg"></div>
             <MenuContainer />
-            <Switch>
-              <Route exact path="/" component={HomeContainer} />
-              <Route path="/portfolio" component={PortfolioContainer} />
-              <Route path="/contacts" component={ContactsContainer} />
-              <Route component={NotFound} />
-            </Switch>
+            <Route render={({location}) => (
+              <TransitionGroup component="div" className="transition-group">
+                <CSSTransition key={location.key} timeout={300} classNames="fade">
+                  <Switch location={location}>
+                    <Route exact path="/" component={HomeContainer} />
+                    <Route path="/portfolio" component={PortfolioContainer} />
+                    <Route path="/contacts" component={ContactsContainer} />
+                    <Route component={NotFound} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )} />
           <Copyright />
           </div>
         </Router>
