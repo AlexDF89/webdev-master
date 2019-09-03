@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function MenuLi(props) {
   return (
@@ -8,5 +9,13 @@ function MenuLi(props) {
     </li>
   );
 }
+
+MenuLi.propTypes = {
+  menuId: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  classes: PropTypes.string
+};
 
 export default MenuLi;

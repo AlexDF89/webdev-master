@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import PortfolioFilterContainer from '../../containers/PortfolioFilterContainer';
 import PortfolioItem from '../PortfolioItem';
@@ -24,5 +25,18 @@ function Portfolio(props) {
     </main>
   );
 }
+
+Portfolio.propTypes = {
+  portfolio: PropTypes.oneOfType([
+    PropTypes.oneOf([]),
+    PropTypes.arrayOf(PropTypes.exact({
+      title: PropTypes.string,
+      src: PropTypes.string,
+      desc: PropTypes.string,
+      href: PropTypes.string,
+      type: PropTypes.array
+    }))
+  ])
+};
 
 export default Portfolio;

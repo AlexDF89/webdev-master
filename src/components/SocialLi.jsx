@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function SocialLi(props) {
 	return (
@@ -7,5 +8,12 @@ function SocialLi(props) {
 		</li>
 	);
 }
+
+SocialLi.propTypes = {
+	imgSrc: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
+	href: PropTypes.string.isRequired,
+	classLi: PropTypes.string
+};
 
 export default SocialLi;

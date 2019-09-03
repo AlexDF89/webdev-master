@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import SocialLi from '../SocialLi';
 import logoMail from '../../images/mail_icon.png';
@@ -46,5 +47,12 @@ function Contacts(props) {
     </main>
   );
 }
+
+Contacts.propTypes = {
+  form: PropTypes.exact({
+    mes: PropTypes.string,
+    ok: PropTypes.bool
+  })
+};
 
 export default Contacts;

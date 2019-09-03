@@ -21,7 +21,7 @@ export function sendForm(event) {
       });
   
       const timeout = setTimeout(function() {
-        dispatch({ type: SEND_FORM, form: { mes: false} });
+        dispatch({ type: SEND_FORM, form: { mes: ''} });
         clearTimeout(timeout);
       }, 4000);
     }
@@ -36,7 +36,7 @@ export function sendForm(event) {
           })
 
           const timeout = setTimeout(function() {
-            dispatch({ type: SEND_FORM, form: { mes: false} });
+            dispatch({ type: SEND_FORM, form: { mes: ''} });
             clearTimeout(timeout);
           }, 4000);
         })

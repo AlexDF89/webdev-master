@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from '../Button';
 import Social from '../Social';
@@ -29,5 +30,12 @@ function Home(props) {
     </main>
   );
 }
+
+Home.propTypes = {
+  form: PropTypes.exact({
+    mes: PropTypes.string,
+    ok: PropTypes.bool
+  })
+};
 
 export default Home;

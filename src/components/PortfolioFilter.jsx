@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import PortfolioLi from './PortfolioLi';
 
@@ -14,5 +15,12 @@ function PortfolioFilter(props) {
     </nav>
   );
 }
+
+PortfolioFilter.propTypes = {
+  onSetPortfolioFilter: PropTypes.func,
+  state: PropTypes.shape({
+    portfolioFilter: PropTypes.string
+  })
+};
 
 export default PortfolioFilter;

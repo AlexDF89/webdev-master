@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTpes from 'prop-types';
 
 import SocialLi from './SocialLi';
 import logoGit from '../images/github_icon.svg';
@@ -16,5 +17,9 @@ function Social(props) {
 		</div>
 	);
 }
+
+Social.propTypes = {
+	text: PropTpes.string.isRequired
+};
 
 export default Social;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FormContainer from '../containers/FormContainer';
 
 function Popup(props) {
@@ -11,5 +12,11 @@ function Popup(props) {
     </div>
 	);
 }
+
+Popup.propTypes = {
+	classes: PropTypes.string,
+	popup: PropTypes.bool.isRequired,
+	onClosePopup: PropTypes.func.isRequired
+};
 
 export default Popup;

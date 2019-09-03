@@ -28,10 +28,11 @@ function Menu(props) {
   );
 }
 
-MenuLi.propTypes = {
-  menu: PropTypes.arrayOf(PropTypes.shape({
+Menu.propTypes = {
+  onSetMenu: PropTypes.func,
+  menu: PropTypes.arrayOf(PropTypes.exact({
     text: PropTypes.string.isRequired,
-    menuId: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     active: PropTypes.bool.isRequired
   }))
 };
